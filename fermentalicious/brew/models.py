@@ -9,15 +9,15 @@ class Fermentation(models.Model):
     beverage = models.ForeignKey(Beverage, on_delete=models.CASCADE)
     fermentation_start_date = models.DateTimeField('datetime started')
     fermentation_end_date = models.DateTimeField('datetime ended')
-    fermentation_original_gravity = models.DecimalField()
-    fermentation_final_gravity = models.DecimalField()
-    fermentation_final_abv = models.DecimalField()
+    fermentation_original_gravity = models.DecimalField(max_digits=4, decimal_places=3)
+    fermentation_final_gravity = models.DecimalField(max_digits=4, decimal_places=3)
+    fermentation_final_abv = models.DecimalField(max_digits=4, decimal_places=2)
 
 class FermentationProgress(models.Model):
     fermentation = models.ForeignKey(Fermentation, on_delete=models.CASCADE)
     measurement_date = models.DateTimeField('datetime measured')
-    specific_gravity = models.DecimalField()
-    temperature = models.DecimalField()
+    specific_gravity = models.DecimalField(max_digits=4, decimal_places=3)
+    temperature = models.DecimalField(max_digits=5, decimal_places=2)
     
     
     

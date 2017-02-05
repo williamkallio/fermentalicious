@@ -3,6 +3,7 @@ from django.db import models
 class Beverage(models.Model):
     beverage_name = models.CharField(max_length=200)
     beverage_description = models.CharField(max_length=1000)
+    beverage_beersmith_ref = models.CharField(max_length=1000)
     create_datetime = models.DateTimeField('datetime created')
 
 class Fermentation(models.Model):

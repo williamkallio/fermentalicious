@@ -1,9 +1,0 @@
-{% if beverage_list %}
-	<ul>
-	{% for beverage in beverage_list %}
-		        <li><a href="/brew/{{ beverage.id }}/">{{ beverage.beverage_name }}</a></li>
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No polls are available.</p>
-{% endif %}

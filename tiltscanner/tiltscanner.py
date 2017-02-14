@@ -1,8 +1,5 @@
-#!/usr/bin/env python
-# test BLE Scanning software
-# jcs 6/8/2014
-# bk 2/12/2017 refactoring - separating concerns, adding discovery of multiple devices
-
+# WK 2/12/2017 refactoring - separating concerns, adding discovery of multiple devices
+# Hat tip to https://github.com/jimmayhugh/TiltRPi/blob/master/tiltblescan.py
 # See https://kvurd.com/blog/tilt-hydrometer-ibeacon-data-format/ as reference - explained below
 # Tilt sends 2 different messages:
 #1 is some kind of scan status - no relevant data
